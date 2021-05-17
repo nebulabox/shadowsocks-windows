@@ -1,4 +1,7 @@
-<img src="shadowsocks-csharp/Resources/ssw128.png" alt="[logo]" width="48"/> Shadowsocks for Windows
+<img src="shadowsocks-csharp/Resources/ssw128.png" alt="[logo]" width="48"/> Shadowsocks for Windows with all encryption methods support  
+
+If want to use aes-128-cfb and other methods on Windows, try this.
+
 =======================
 
 [![Build Status]][Appveyor]
