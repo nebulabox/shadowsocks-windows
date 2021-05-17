@@ -14,7 +14,7 @@ namespace Shadowsocks.Controller
     {
         private static Logger logger = LogManager.GetCurrentClassLogger();
 
-        private const string UpdateURL = "https://api.github.com/repos/shadowsocks/shadowsocks-windows/releases";
+        private const string UpdateURL = "https://api.github.com/repos/nebulabox/shadowsocks-windows/releases";
         private const string UserAgent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36";
 
         private Configuration config;
@@ -26,7 +26,7 @@ namespace Shadowsocks.Controller
         public string LatestVersionLocalName;
         public event EventHandler CheckUpdateCompleted;
 
-        public const string Version = "4.1.10.0";
+        public const string Version = "5.0.0";
 
         private class CheckUpdateTimer : System.Timers.Timer
         {
@@ -39,21 +39,21 @@ namespace Shadowsocks.Controller
 
         public void CheckUpdate(Configuration config, int delay)
         {
-            CheckUpdateTimer timer = new CheckUpdateTimer(delay);
-            timer.AutoReset = false;
-            timer.Elapsed += Timer_Elapsed;
-            timer.config = config;
-            timer.Enabled = true;
+            //CheckUpdateTimer timer = new CheckUpdateTimer(delay);
+            //timer.AutoReset = false;
+            //timer.Elapsed += Timer_Elapsed;
+            //timer.config = config;
+            //timer.Enabled = true;
         }
 
         private void Timer_Elapsed(object sender, System.Timers.ElapsedEventArgs e)
         {
-            CheckUpdateTimer timer = (CheckUpdateTimer)sender;
-            Configuration config = timer.config;
-            timer.Elapsed -= Timer_Elapsed;
-            timer.Enabled = false;
-            timer.Dispose();
-            CheckUpdate(config);
+            //CheckUpdateTimer timer = (CheckUpdateTimer)sender;
+            //Configuration config = timer.config;
+            //timer.Elapsed -= Timer_Elapsed;
+            //timer.Enabled = false;
+            //timer.Dispose();
+            //CheckUpdate(config);
         }
 
         public void CheckUpdate(Configuration config)
@@ -62,10 +62,10 @@ namespace Shadowsocks.Controller
 
             try
             {
-                logger.Info("Checking updates...");
-                WebClient http = CreateWebClient();
-                http.DownloadStringCompleted += http_DownloadStringCompleted;
-                http.DownloadStringAsync(new Uri(UpdateURL));
+                //logger.Info("Checking updates...");
+                //WebClient http = CreateWebClient();
+                //http.DownloadStringCompleted += http_DownloadStringCompleted;
+                //http.DownloadStringAsync(new Uri(UpdateURL));
             }
             catch (Exception ex)
             {

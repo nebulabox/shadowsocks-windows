@@ -33,7 +33,7 @@ namespace Shadowsocks.Model
         public bool useOnlinePac;
         public bool secureLocalPac = true;
         public bool availabilityStatistics;
-        public bool autoCheckUpdate;
+        public bool autoCheckUpdate = false;
         public bool checkPreRelease;
         public bool isVerboseLogging;
         //public NLogConfig.LogLevel logLevel;

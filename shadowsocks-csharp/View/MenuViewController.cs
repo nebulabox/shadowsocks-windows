@@ -613,7 +613,7 @@ namespace Shadowsocks.View
 
         private void AboutItem_Click(object sender, EventArgs e)
         {
-            Process.Start("https://github.com/shadowsocks/shadowsocks-windows");
+            Process.Start("https://github.com/nebulabox/shadowsocks-windows");
         }
 
         private void notifyIcon1_Click(object sender, MouseEventArgs e)
@@ -922,8 +922,8 @@ namespace Shadowsocks.View
         private void UpdateUpdateMenu()
         {
             Configuration configuration = controller.GetConfigurationCopy();
-            autoCheckUpdatesToggleItem.Checked = configuration.autoCheckUpdate;
-            checkPreReleaseToggleItem.Checked = configuration.checkPreRelease;
+            autoCheckUpdatesToggleItem.Checked = false; // configuration.autoCheckUpdate;
+            checkPreReleaseToggleItem.Checked = false; // configuration.checkPreRelease;
         }
 
         private void autoCheckUpdatesToggleItem_Click(object sender, EventArgs e)
